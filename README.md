@@ -44,3 +44,11 @@ Note the id's are relative to each other between tables.
 ![](codechallengeimg/buildingsTable.PNG)
 
 ![](codechallengeimg/elevatorsTable.PNG)
+
+<h1> Rest Requests </h1>
+
+<h2>Add a user</h2>
+
+![](codechallengeimg/addUser.PNG)
+
+![](codechallengeimg/addUserCode.PNG)
