@@ -133,6 +133,7 @@ app.delete("/buildings/:id", async (req, res) => {
 });
 
 ///////////////////////////////Elevator Endpoints /////////////////////////////////////////////////
+
 //This adds a new elevator
 app.post("/elevators", async (req, res) => {
   const data = req.body;
@@ -156,5 +157,45 @@ app.post("/elevators", async (req, res) => {
   }
 });
 
+//This gets all buildings in the database
+app.get("/elevators", async (req, res) => {
+  const params = {
+    TableName: "elevatorsTable",
+  };
+
+  const result = await db.scan(params).promise();
+  res.status(200).json({ elevators: result });
+});
+
+//This edits the elevator by id
+app.patch("/elevators/:id", async (req, res) => {
+  const data = req.body;
+  const params = {
+    TableName: "elevatorsTable",
+    Item: {
+      id: data.id,
+      name: data.name,
+      list_of_Floors: data.list_of_Floors,
+      current_Floor: data.current_Floor,
+      state: data.state
+    },
+  }
+  await db.put(params).promise();
+  res.status(200).json({ elevators: params.Item});
+});
+
+//This deletes an elevator by id
+app.delete("/elevators/:id", async (req, res) => {
+  const params = {
+    TableName: "elevatorsTable",
+    Key: {
+      id: req.params.id
+    },
+  };
+
+  await db.delete(params).promise();
+  res.status(200).json({ success: true });
+
+});
 
 module.exports.app = serverless(app);
