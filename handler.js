@@ -1,3 +1,5 @@
+/////////Imports///////////////////////////////
+
 const serverless = require('serverless-http');
 const express = require("express");
 const app = express();
@@ -8,6 +10,8 @@ const { v4: uuidv4 } = require('uuid');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+/////////////////////// User Endpoints //////////////////////////////////////
 
 //This adds a new user
 app.post("/users", async (req, res) => {
@@ -67,6 +71,11 @@ app.delete("/users/:id", async (req, res) => {
   res.status(200).json({ success: true });
 
 });
+
+///////////////////////////////Building Endpoints /////////////////////////////////////////////////
+
+
+
 
 
 module.exports.app = serverless(app);

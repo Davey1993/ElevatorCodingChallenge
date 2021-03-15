@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/elevator-rest-api/dev/1615820033986-2021-03-15T14:53:53.986Z/elevator-rest-api.zip"
+          "S3Key": "serverless/elevator-rest-api/dev/1615821104913-2021-03-15T15:11:44.913Z/elevator-rest-api.zip"
         },
         "Handler": "handler.app",
         "Runtime": "nodejs12.x",
@@ -186,14 +186,14 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersionQAEdLDWFOWZiDfutuIDS9uxrig29Y9dMMmJ7dUHm8rY": {
+    "AppLambdaVersiont2W9T7wyTA3AsRxZcAK6MvYfNqRkroJuvwTffL0pR2s": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "KLBxsnwZjxnB2UKj0PajuAYXysNQ1fUEoP/M/4ng85s="
+        "CodeSha256": "TXI2qG2t262wE5b4Utw9aJPAqVJUrLxH6e59lpxIVEQ="
       }
     },
     "ApiGatewayRestApi": {
@@ -266,7 +266,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1615820025638": {
+    "ApiGatewayDeployment1615821097506": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -336,6 +336,28 @@
           "WriteCapacityUnits": 1
         }
       }
+    },
+    "buildingsTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "TableName": "buildingsTable",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "id",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        }
+      }
     }
   },
   "Outputs": {
@@ -347,7 +369,7 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersionQAEdLDWFOWZiDfutuIDS9uxrig29Y9dMMmJ7dUHm8rY"
+        "Ref": "AppLambdaVersiont2W9T7wyTA3AsRxZcAK6MvYfNqRkroJuvwTffL0pR2s"
       }
     },
     "ServiceEndpoint": {
