@@ -157,7 +157,7 @@ app.post("/elevators", async (req, res) => {
   }
 });
 
-//This gets all buildings in the database
+//This gets all elevators in the database
 app.get("/elevators", async (req, res) => {
   const params = {
     TableName: "elevatorsTable",
