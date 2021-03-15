@@ -182,7 +182,7 @@ app.get("/elevators", async (req, res) => {
   res.status(200).json({ elevators: result });
 });
 
-//This edits the elevator by id
+//This edits the elevator floor by id
 app.put("/elevators/:id", async (req, res) => {
   const data = req.body;
   const params = {
@@ -213,7 +213,7 @@ app.delete("/elevators/:id", async (req, res) => {
 
 });
 
-//Find elevator status in particular building
+//Find elevator elevator by id
 app.get("/elevators/:id", async (req, res) => {
   const params = {
     TableName: "elevatorsTable",

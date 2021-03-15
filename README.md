@@ -30,6 +30,8 @@ to take them to.
 <li>Also needed <i>npm install serverless-http</i></li>
 <li>You will need to also configure your aws account with serverless, you can setup your keys on aws/*yourname*/mysecurity credentials.</li>
 <li>The command then is <i>serverless config credentials --provider aws --key *YOURKEYHERE* --secret *YOURSECRETKEYHERE*</i></li>
+<li>You must then deploy serverless by using the command <i>sls deploy</i></li>
+<li>When you are finished using the service you can remove everything by using <i>sls remove</i></li>
 <li>Additional Documentation for Serverless setup can be found <a href="https://www.serverless.com/blog/how-create-rest-api-serverless-components">here</a></li>
 </ul>
 
@@ -69,7 +71,7 @@ Note the id's are relevent to each other between tables.
 
 ![](codechallengeimg/put.PNG)
 
-h2>Find a building for a user</h2>
+<h2>Find a building for a user</h2>
 <b>User has building id</b>
 
 ![](codechallengeimg/first.PNG)
@@ -96,3 +98,33 @@ h2>Find a building for a user</h2>
 <b>Then check status of elevator by id</b>
 
 ![](codechallengeimg/uno.PNG)
+
+<b>Code</b>
+
+![](codechallengeimg/code1.PNG)
+
+![](codechallengeimg/code2.PNG)
+
+<h2>User summons an elevator </h2>
+
+<b>Finds elevator by id contained in buildingsTable</b>
+
+![](codechallengeimg/summonElevator.PNG)
+
+<b>Code</b>
+
+![](codechallengeimg/code5.PNG)
+
+<h2>User selects a floor </h2>
+
+<b>PUT updates floor</b>
+
+![](codechallengeimg/selectsFloor1.PNG)
+
+<b>Code</b>
+
+![](codechallengeimg/code6.PNG)
+
+<h1>More infromation</h1>
+<h2>Contact Me</h2>
+david.dunleavy93@gmail.com
