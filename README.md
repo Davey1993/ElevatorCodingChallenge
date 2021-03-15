@@ -35,6 +35,12 @@ to take them to.
 <li>Additional Documentation for Serverless setup can be found <a href="https://www.serverless.com/blog/how-create-rest-api-serverless-components">here</a></li>
 </ul>
 
+<h1> Testing </h1>
+Primarily Postman was the software used for testing my functions. However when it came to debugging, I utlized features found
+within AWS Lambda Cloudwatch, this made logs from calls available to me, helping me learn why certain calls failed. Very useful.
+
+![](codechallengeimg/testing.PNG)
+
 <h1> DynamoDB </h1>
 Here are how the tables generated in this project appear in DynamoDB.
 Note the id's are relevent to each other between tables.
@@ -124,6 +130,11 @@ Note the id's are relevent to each other between tables.
 <b>Code</b>
 
 ![](codechallengeimg/code6.PNG)
+
+<h1>Learning outcome</h1>
+Prior to this project, I had not been exposed to any technology available in AWS. This project introduced me to the likes
+of DynamoDB, AWS Lambda and API Gateway and I feel I have learnt alot from taking the approach I have taken. I also gots some experience with 
+Serverless framework and Express also as a bonus. 
 
 <h1>More information</h1>
 <h2>Contact Me</h2>
