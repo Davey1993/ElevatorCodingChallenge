@@ -27,7 +27,7 @@ app.post("/users", async (req, res) => {
 
   try {
     await db.put(params).promise();
-    res.status(201).json({ user: params.Item, user: params.Buildings });
+    res.status(201).json({ user: params.Item});
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -93,6 +93,16 @@ app.post("/buildings", async (req, res) => {
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
+});
+
+//This gets all buildings in the database
+app.get("/buildings", async (req, res) => {
+  const params = {
+    TableName: "buildingsTable",
+  };
+
+  const result = await db.scan(params).promise();
+  res.status(200).json({ buildings: result });
 });
 
 
