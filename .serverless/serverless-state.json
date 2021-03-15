@@ -186,7 +186,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/elevator-rest-api/dev/1615821104913-2021-03-15T15:11:44.913Z/elevator-rest-api.zip"
+                "S3Key": "serverless/elevator-rest-api/dev/1615822346429-2021-03-15T15:32:26.429Z/elevator-rest-api.zip"
               },
               "Handler": "handler.app",
               "Runtime": "nodejs12.x",
@@ -204,14 +204,14 @@
               "AppLogGroup"
             ]
           },
-          "AppLambdaVersiont2W9T7wyTA3AsRxZcAK6MvYfNqRkroJuvwTffL0pR2s": {
+          "AppLambdaVersionsKtkMSCXO8fi4nJWsEt4uiprRl5ln8fHCZZXE1o": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "TXI2qG2t262wE5b4Utw9aJPAqVJUrLxH6e59lpxIVEQ="
+              "CodeSha256": "YhX0+NrCqB4Zb9C4WBwoPiMoO+N6kKtfTWeXKf2mZzo="
             }
           },
           "ApiGatewayRestApi": {
@@ -284,7 +284,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1615821097506": {
+          "ApiGatewayDeployment1615822338439": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -387,7 +387,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersiont2W9T7wyTA3AsRxZcAK6MvYfNqRkroJuvwTffL0pR2s"
+              "Ref": "AppLambdaVersionsKtkMSCXO8fi4nJWsEt4uiprRl5ln8fHCZZXE1o"
             }
           },
           "ServiceEndpoint": {
@@ -514,7 +514,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersiont2W9T7wyTA3AsRxZcAK6MvYfNqRkroJuvwTffL0pR2s"
+        "versionLogicalId": "AppLambdaVersionsKtkMSCXO8fi4nJWsEt4uiprRl5ln8fHCZZXE1o"
       }
     },
     "resources": {
@@ -588,7 +588,7 @@
     "artifact": "C:\\Users\\David\\ElevatorCodeChallenge\\ElevatorCodingChallenge\\.serverless\\elevator-rest-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/elevator-rest-api/dev/1615821104913-2021-03-15T15:11:44.913Z",
+    "artifactDirectoryName": "serverless/elevator-rest-api/dev/1615822346429-2021-03-15T15:32:26.429Z",
     "artifact": "elevator-rest-api.zip"
   }
 }

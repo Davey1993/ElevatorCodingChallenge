@@ -21,7 +21,7 @@ app.post("/users", async (req, res) => {
     Item: {
       id: uuidv4(),
       name: data.name,
-      currentBuildings: data.currentBuildings
+      building_ids: data.building_ids
     },
   };
 
@@ -41,11 +41,11 @@ app.patch("/users/:id", async (req, res) => {
     Item: {
       id: uuidv4(),
       name: data.name,
-      currentBuildings: data.currentBuildings
+      building_ids: data.building_ids
     },
   }
   await db.put(params).promise();
-  res.status(200).json({ user: params.Item, user: params.Buildings });
+  res.status(200).json({ user: params.Item});
 });
 
 //This gets all users in the database
@@ -74,7 +74,26 @@ app.delete("/users/:id", async (req, res) => {
 
 ///////////////////////////////Building Endpoints /////////////////////////////////////////////////
 
+//This adds a new building
+app.post("/buildings", async (req, res) => {
+  const data = req.body;
+  const params = {
+    TableName: "buildingsTable",
+    Item: {
+      id: uuidv4(),
+      name: data.name,
+      location: data.location,
+      elevatorIds: data.elevatorIds
+    },
+  };
 
+  try {
+    await db.put(params).promise();
+    res.status(201).json({ buildings: params.Item });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
 
 
 
