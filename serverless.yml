@@ -1,10 +1,9 @@
-
 service: elevator-rest-api
 frameworkVersion: '2'
 
 provider:
   name: aws
-  region: eu-west-1
+  region: eu-west-1 ##This can be changed to suit the location you are, eu-west-1 is Ireland
   runtime: nodejs12.x
   iamRoleStatements:
     - Effect: Allow
@@ -20,7 +19,7 @@ functions:
 
 resources:
   Resources:
-    usersTable:
+    usersTable: ##Specifying DynamoDB usersTable
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: usersTable
@@ -33,7 +32,7 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-    buildingsTable:
+    buildingsTable: ##Specifying DynamoDB buildingsTable
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: buildingsTable
@@ -46,7 +45,7 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-    elevatorsTable:
+    elevatorsTable: ##Specifying DynamoDB elevatorsTable
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: elevatorsTable
