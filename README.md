@@ -35,7 +35,7 @@ to take them to.
 
 <h1> DynamoDB </h1>
 Here are how the tables generated in this project appear in DynamoDB.
-Note the id's are relative to each other between tables.
+Note the id's are relevent to each other between tables.
 
 ![](codechallengeimg/dynamoDBtables.PNG)
 
@@ -48,8 +48,11 @@ Note the id's are relative to each other between tables.
 <h1> REST Requests </h1>
 
 <h2>Add a user</h2>
+Postman
 
 ![](codechallengeimg/addUser.PNG)
+
+Code
 
 ![](codechallengeimg/addUserCode.PNG)
 
@@ -57,3 +60,11 @@ Note the id's are relative to each other between tables.
 Before
 
 ![](codechallengeimg/before.PNG)
+
+After
+
+![](codechallengeimg/after.PNG)
+
+Code
+
+![](codechallengeimg/put.PNG)

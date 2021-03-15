@@ -106,7 +106,7 @@ app.get("/buildings", async (req, res) => {
 });
 
 //This edits the building by id
-app.patch("/buildings/:id", async (req, res) => {
+app.put("/buildings/:id", async (req, res) => {
   const data = req.body;
   const params = {
     TableName: "buildingsTable",
@@ -168,7 +168,7 @@ app.get("/elevators", async (req, res) => {
 });
 
 //This edits the elevator by id
-app.patch("/elevators/:id", async (req, res) => {
+app.put("/elevators/:id", async (req, res) => {
   const data = req.body;
   const params = {
     TableName: "elevatorsTable",
