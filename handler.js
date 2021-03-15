@@ -132,4 +132,6 @@ app.delete("/buildings/:id", async (req, res) => {
 
 });
 
+///////////////////////////////Elevator Endpoints /////////////////////////////////////////////////
+
 module.exports.app = serverless(app);
