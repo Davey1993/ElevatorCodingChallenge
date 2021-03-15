@@ -15,7 +15,8 @@ app.post("/users", async (req, res) => {
     TableName: "usersTable",
     Item: {
       id: uuidv4(),
-      name: data.name
+      name: data.name,
+      building_id: [1,2,3,4,5]
     },
   };
 
@@ -25,6 +26,16 @@ app.post("/users", async (req, res) => {
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
+});
+
+
+app.get("/users", async (req, res) => {
+  const params = {
+    TableName: "usersTable",
+  };
+
+  const result = await db.scan(params).promise();
+  res.status(200).json({ users: result });
 });
 
 module.exports.app = serverless(app);
