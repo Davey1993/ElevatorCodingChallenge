@@ -119,12 +119,12 @@ Note the id's are relevent to each other between tables.
 
 <b>PUT updates floor</b>
 
-![](codechallengeimg/selectsFloor1.PNG)
+![](codechallengeimg/changingFloor.PNG)
 
 <b>Code</b>
 
 ![](codechallengeimg/code6.PNG)
 
-<h1>More infromation</h1>
+<h1>More information</h1>
 <h2>Contact Me</h2>
 david.dunleavy93@gmail.com
