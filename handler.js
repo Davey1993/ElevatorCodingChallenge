@@ -132,6 +132,21 @@ app.delete("/buildings/:id", async (req, res) => {
 
 });
 
+//This selects a buildings by id
+app.get("/buildings/:id", async (req, res) => {
+  const params = {
+    TableName: "buildingsTable",
+    
+    Key: {
+      id: req.params.id
+    },
+  };
+
+  const result = await db.get(params).promise();
+  res.status(200).json({ buildings: result });
+
+});
+
 ///////////////////////////////Elevator Endpoints /////////////////////////////////////////////////
 
 //This adds a new elevator
@@ -195,6 +210,21 @@ app.delete("/elevators/:id", async (req, res) => {
 
   await db.delete(params).promise();
   res.status(200).json({ success: true });
+
+});
+
+//Find elevator status in particular building
+app.get("/elevators/:id", async (req, res) => {
+  const params = {
+    TableName: "elevatorsTable",
+    
+    Key: {
+      id: req.params.id
+    },
+  };
+
+  const result = await db.get(params).promise();
+  res.status(200).json({ elevators: result });
 
 });
 

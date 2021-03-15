@@ -48,23 +48,51 @@ Note the id's are relevent to each other between tables.
 <h1> REST Requests </h1>
 
 <h2>Add a user</h2>
-Postman
+<b>Postman</b>
 
 ![](codechallengeimg/addUser.PNG)
 
-Code
+<b>Code</b>
 
 ![](codechallengeimg/addUserCode.PNG)
 
 <h2>Update a user - change name, modify buildings belongs to </h2>
-Before
+<b>Before</b>
 
 ![](codechallengeimg/before.PNG)
 
-After
+<b>After</b>
 
 ![](codechallengeimg/after.PNG)
 
-Code
+<b>Code</b>
 
 ![](codechallengeimg/put.PNG)
+
+h2>Find a building for a user</h2>
+<b>User has building id</b>
+
+![](codechallengeimg/first.PNG)
+
+<b>User searches for building</b>
+
+![](codechallengeimg/second.PNG)
+
+<b>To see all buildings</b>
+
+![](codechallengeimg/third.PNG)
+
+<b>Code</b>
+
+![](codechallengeimg/getting.PNG)
+
+<h2>Get status of all elevators in a building for a user </h2>
+
+<b>First find elevator ids in the building</b>
+
+![](codechallengeimg/dos.PNG)
+
+
+<b>Then check status of elevator by id</b>
+
+![](codechallengeimg/uno.PNG)
