@@ -133,5 +133,28 @@ app.delete("/buildings/:id", async (req, res) => {
 });
 
 ///////////////////////////////Elevator Endpoints /////////////////////////////////////////////////
+//This adds a new elevator
+app.post("/elevators", async (req, res) => {
+  const data = req.body;
+  const state = ["Up", "Down", "Stopped","Out of Service"];
+  const params = {
+    TableName: "elevatorsTable",
+    Item: {
+      id: uuidv4(),
+      name: data.name,
+      list_of_Floors: data.list_of_Floors,
+      current_Floor: data.current_Floor,
+      state: state
+    },
+  };
+
+  try {
+    await db.put(params).promise();
+    res.status(201).json({ elevators: params.Item });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 
 module.exports.app = serverless(app);
