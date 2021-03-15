@@ -15,8 +15,7 @@ app.post("/users", async (req, res) => {
     TableName: "usersTable",
     Item: {
       id: uuidv4(),
-      name: data.name,
-      building_id: [1,2,3,4,5]
+      name: data.name
     },
   };
 
