@@ -21,7 +21,7 @@ to take them to.
 
 ![](codechallengeimg/data.PNG)
 
-<h1>Pre-requisites</h1>
+<h1>Prerequisites</h1>
 <ul>
 <li>You will need Nodejs and npm installed if running this application on windows.</li>
 <li>The other packages should be included with this project when cloned but just incase I will include more info. </li>
@@ -45,10 +45,15 @@ Note the id's are relative to each other between tables.
 
 ![](codechallengeimg/elevatorsTable.PNG)
 
-<h1> Rest Requests </h1>
+<h1> REST Requests </h1>
 
 <h2>Add a user</h2>
 
 ![](codechallengeimg/addUser.PNG)
 
 ![](codechallengeimg/addUserCode.PNG)
+
+<h2>Update a user - change name, modify buildings belongs to </h2>
+Before
+
+![](codechallengeimg/before.PNG)

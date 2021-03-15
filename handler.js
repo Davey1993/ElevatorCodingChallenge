@@ -34,7 +34,7 @@ app.post("/users", async (req, res) => {
 });
 
 //This edits the user by id
-app.patch("/users/:id", async (req, res) => {
+app.put("/users/:id", async (req, res) => {
   const data = req.body;
   const params = {
     TableName: "usersTable",
