@@ -22,17 +22,25 @@ to take them to.
 ![](codechallengeimg/data.PNG)
 
 <h1>Pre-requisites</h1>
-You will need Nodejs and npm installed if running this application on windows.
-<br>
-The other packages should be included with this project when cloned but just incase I will include more info. 
-<br>
-The first thing I did was install serverless framework with <i>npm install serverless</i>
-<br>
-I also had to install express with <i>npm install express</i>
-Also needed <i>npm install serverless-http</i>
-<br>
-You will need to also configure your aws account with serverless, you can setup your keys on aws/*yourname*/mysecurity credentials.
-The command then is <i>serverless config credentials --provider aws --key *YOURKEYHERE* --secret *YOURSECRETKEYHERE*</i>
-<br>
-Additional Documentation for Serverless setup can be found <a href="https://www.serverless.com/blog/how-create-rest-api-serverless-components">here</a>
+<ul>
+<li>You will need Nodejs and npm installed if running this application on windows.</li>
+<li>The other packages should be included with this project when cloned but just incase I will include more info. </li>
+<li>The first thing I did was install serverless framework with <i>npm install serverless</i></li>
+<li>I also had to install express with <i>npm install express</i></li>
+<li>Also needed <i>npm install serverless-http</i></li>
+<li>You will need to also configure your aws account with serverless, you can setup your keys on aws/*yourname*/mysecurity credentials.</li>
+<li>The command then is <i>serverless config credentials --provider aws --key *YOURKEYHERE* --secret *YOURSECRETKEYHERE*</i></li>
+<li>Additional Documentation for Serverless setup can be found <a href="https://www.serverless.com/blog/how-create-rest-api-serverless-components">here</a></li>
+</ul>
 
+<h1> DynamoDB </h1>
+Here are how the tables generated in this project appear in DynamoDB.
+Note the id's are relative to each other between tables.
+
+![](codechallengeimg/dynamoDBtables.PNG)
+
+![](codechallengeimg/usersTable.PNG)
+
+![](codechallengeimg/buildingsTable.PNG)
+
+![](codechallengeimg/elevatorsTable.PNG)
