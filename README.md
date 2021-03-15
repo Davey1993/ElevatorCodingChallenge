@@ -12,10 +12,12 @@ to take them to.
  The application data must be persisted in a database of some type. In this instance DynamoDB is used.
 
 <h1>Architecture</h1>
-![](codechallengeimg/architecture.png)
+
+![](codechallengeimg/architecture.PNG)
 
 <h1> Structure </h1>
-![](codechallengeimg/data.png)
+
+![](codechallengeimg/data.PNG)
 
 <h1>Pre-requisites</h1>
 You will need Nodejs and npm installed if running this application on windows.
