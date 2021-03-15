@@ -105,6 +105,31 @@ app.get("/buildings", async (req, res) => {
   res.status(200).json({ buildings: result });
 });
 
+//This edits the building by id
+app.patch("/buildings/:id", async (req, res) => {
+  const data = req.body;
+  const params = {
+    TableName: "buildingsTable",
+    Item: {
+      elevatorIds: data.elevatorIds
+    },
+  }
+  await db.put(params).promise();
+  res.status(200).json({ buildings: params.Item});
+});
 
+//This deletes a buildings by id
+app.delete("/buildings/:id", async (req, res) => {
+  const params = {
+    TableName: "buildingsTable",
+    Key: {
+      id: req.params.id
+    },
+  };
+
+  await db.delete(params).promise();
+  res.status(200).json({ success: true });
+
+});
 
 module.exports.app = serverless(app);
