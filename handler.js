@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const AWS = require("aws-sdk");
 const db = new AWS.DynamoDB.DocumentClient();
-const { v4: uuidv4 } = require('uuid'); // I am using uuidv4 for creating id's for our users, buildings & elevators
+const { v4: uuidv4 } = require('uuid'); // I am using uuidv4 for generating id's for our users, buildings & elevators
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -39,7 +39,7 @@ app.put("/users/:id", async (req, res) => {
   const params = {
     TableName: "usersTable",
     Item: {
-      id: uuidv4(),
+      id: data.id,
       name: data.name,
       building_ids: data.building_ids
     },
@@ -198,7 +198,7 @@ app.get("/elevators", async (req, res) => {
 });
 
 //This edits the elevator floor by id
-app.put("/elevators/:id", async (req, res) => {
+app.patch("/elevators/:id", async (req, res) => {
   const data = req.body;
   const params = {
     TableName: "elevatorsTable",
