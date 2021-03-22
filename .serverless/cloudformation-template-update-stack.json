@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/elevator-rest-api/dev/1615844550731-2021-03-15T21:42:30.731Z/elevator-rest-api.zip"
+          "S3Key": "serverless/elevator-rest-api/dev/1616438124120-2021-03-22T18:35:24.120Z/elevator-rest-api.zip"
         },
         "Handler": "handler.app",
         "Runtime": "nodejs12.x",
@@ -186,14 +186,14 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersionrwKSeOI1VE9RugaYe1VZsTO036lSdBbvKS3c1jpYM": {
+    "AppLambdaVersionWZJUGzX6eEJror7ooXgr050j4fEXE1TTlyX9ISPZY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "PYLfmF4KAIevg2y3vtyOD+Wj28CxrwDF0dWT2vGfBgg="
+        "CodeSha256": "a2DUNigmF2FSgQCwFgCHGD/hGRs4fE+BqG+Haodm9S0="
       }
     },
     "ApiGatewayRestApi": {
@@ -266,7 +266,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1615844541620": {
+    "ApiGatewayDeployment1616438063442": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -391,7 +391,7 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersionrwKSeOI1VE9RugaYe1VZsTO036lSdBbvKS3c1jpYM"
+        "Ref": "AppLambdaVersionWZJUGzX6eEJror7ooXgr050j4fEXE1TTlyX9ISPZY"
       }
     },
     "ServiceEndpoint": {

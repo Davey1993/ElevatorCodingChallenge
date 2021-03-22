@@ -1,3 +1,6 @@
+### This is basically our service configuration file. 
+
+
 service: elevator-rest-api
 frameworkVersion: '2'
 
@@ -14,8 +17,8 @@ provider:
 functions:
   app:
     handler: handler.app
-    events:
-      - http: any {proxy+} 
+    events: ##http trigger
+      - http: any {proxy+}  ##any method is ok here (GET,PUT,POST), proxy+ tells API Gateway that no matter which endpoint you get, to proxy off this request. 
 
 resources:
   Resources:

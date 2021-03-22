@@ -72,6 +72,21 @@ app.delete("/users/:id", async (req, res) => {
 
 });
 
+//This selects a user by id
+app.get("/users/:id", async (req, res) => {
+  const params = {
+    TableName: "usersTable",
+    
+    Key: {
+      id: req.params.id
+    },
+  };
+
+  const result = await db.get(params).promise();
+  res.status(200).json({ users: result });
+
+});
+
 ///////////////////////////////Building Endpoints /////////////////////////////////////////////////
 
 //This adds a new building
